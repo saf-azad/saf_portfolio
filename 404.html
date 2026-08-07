@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Safwat</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-3);
+    padding: 24px 24px 24px 88px;
+    max-width: 620px;
+  }
+  @media (max-width: 860px) { .error-page { padding-left: 24px; } }
+  .error-page h1 { font-size: var(--text-hero); }
+  .error-page .code { color: var(--color-primary); }
+</style>
+</head>
+<body>
+<div class="error-page">
+  <h1><span class="code">404</span> — page not found</h1>
+  <p>This route doesn't exist. The site lives at one page with a few anchors.</p>
+  <a class="btn btn--primary" href="/">Back to home</a>
+</div>
+</body>
+</html>

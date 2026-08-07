@@ -7,9 +7,12 @@ Plain HTML/CSS/JS — no build step, no framework.
 
 ```
 index.html              Page markup (home, projects, skills, about-me, contacts)
+404.html                 Not-found page, styled to match
 assets/css/style.css     Design tokens + component styles
 assets/js/main.js        Scroll-spy nav highlighting
 assets/images/           Logo, social icons, project covers, favicon
+vercel.json              Clean URLs + cache/security headers for Vercel
+robots.txt               Crawler access
 ```
 
 ## Sections
@@ -33,11 +36,15 @@ python3 -m http.server 8000
 
 ## Deploying
 
-Static files only, so any static host works, e.g.:
+Static files only, so any static host works. `vercel.json` is already
+configured (clean URLs, asset caching, basic security headers), zero build
+step needed.
 
-- **Vercel** — `vercel` in this directory (matches how MetricCage/Detour are
-  hosted), or connect the repo in the Vercel dashboard with no build command
-  and `.` as the output directory.
+- **Vercel** — import this repo at vercel.com/new (matches how
+  MetricCage/Detour are hosted). Framework preset "Other", no build command,
+  root as the output directory — Vercel picks this up automatically from
+  `vercel.json`. Connecting via the dashboard (rather than one-off CLI
+  deploys) means every push to `main` auto-deploys.
 - **GitHub Pages** — enable Pages on this repo, root of the default branch.
 
 ## Notes / follow-ups
